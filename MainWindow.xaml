@@ -1,0 +1,44 @@
+﻿<ctl:OstrichWindow x:Class="OstrichPomoadoro.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OstrichPomoadoro"
+        xmlns:ctl="clr-namespace:OstrichPomoadoro.Controls"
+        mc:Ignorable="d" Closing="OstrichWindow_Closing" OstrichButtonClickEvent="OstrichWindow_OstrichButtonClickEvent"
+        Title="" Height="500" Width="350" Topmost="True">
+    <Window.Resources>
+        <FontFamily x:Key="SegFontFamily">/OstrichPomoadoro;component/Resources/#sevensegment</FontFamily>
+    </Window.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ctl:OstrichCanvas Grid.Row="0">
+            <Label x:Name="lblTicker" Content="25:00" FontSize="72" Canvas.Left="10" Canvas.Top="5" FontFamily="{StaticResource SegFontFamily}" Foreground="#037F03"></Label>
+            <ctl:OstrichButton x:Name="btnStart" Content="开始" Height="50" Width="100" Canvas.Right="10" Canvas.Top="20"
+                               Click="Start_Click"></ctl:OstrichButton>
+        </ctl:OstrichCanvas>
+        <Canvas Grid.Row="1">
+            <ctl:OstrichButton Click="Task_Click" x:Name="E" Content="计划任务" Height="30" Width="100" Canvas.Left="10" Canvas.Top="10"></ctl:OstrichButton>
+            <ctl:OstrichButton Click="Task_Click" x:Name="U" Content="非计划任务" Height="30" Width="100" Canvas.Left="120" Canvas.Top="10"></ctl:OstrichButton>
+            <ctl:OstrichButton Click="Task_Click" x:Name="D" Content="完成任务" Height="30" Width="100" Canvas.Left="240" Canvas.Top="10"></ctl:OstrichButton>
+        </Canvas>
+        <DataGrid Grid.Row="2" x:Name="gridTaskList" ItemsSource="{Binding TaskLists}"
+            AutoGenerateColumns="False"  VerticalAlignment="Top"
+            CanUserSortColumns="False"     Margin="5" IsReadOnly="True"
+            CanUserResizeColumns="False" CanUserResizeRows="False"  SelectionMode="Single"
+            CanUserReorderColumns="False" AlternationCount="2"  RowHeaderWidth="0" CanUserAddRows="False"
+            MouseDoubleClick="gridTaskList_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="任务名称" Width="*"  Binding="{Binding Name}"/>
+                <DataGridTextColumn Header="E"  Width="40"  Binding="{Binding E}"/>
+                <DataGridTextColumn Header="P"  Width="40"  Binding="{Binding P}"/>
+                <DataGridTextColumn Header="U"  Width="40"  Binding="{Binding U}"/>
+                <DataGridTextColumn Header="I"  Width="40"  Binding="{Binding I}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</ctl:OstrichWindow>

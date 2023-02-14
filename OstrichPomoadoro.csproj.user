@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <_LastSelectedProfileId>E:\workspace\dotnet\OstrichPomoadoro\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
+  </PropertyGroup>
+  <ItemGroup>
+    <Page Update="AboutDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="InterruptDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="NewTaskDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Dark\Base.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Dark\OstrichButton.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Dark\OstrichDataGrid.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Dark\OstrichCanvas.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Dark\OstrichDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Dark\OstrichWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Themes\Generic.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

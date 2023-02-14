@@ -1,0 +1,17 @@
+﻿<ctl:OstrichDialog x:Class="OstrichPomoadoro.AboutDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:OstrichPomoadoro"
+        xmlns:ctl="clr-namespace:OstrichPomoadoro.Controls"
+        mc:Ignorable="d" Loaded="OstrichDialog_Loaded"
+        Height="50" Width="350">
+    <Grid>
+        <TextBox Name="textBox" IsReadOnly="True" BorderThickness="0,0,0,0" Margin="10,0,0,0" TextWrapping="Wrap" AcceptsReturn="True"
+                 Background="{StaticResource BackgroudBrush}" 
+                 Foreground="{StaticResource LightForeBrush}"
+                 KeyDown="TextBox_KeyDown"
+                 Text="这是一个简单的番茄钟定时工具，是一个开源项目：https://gitee.com/orchis/ostrich-pomoadoro/"/>
+    </Grid>
+</ctl:OstrichDialog>
